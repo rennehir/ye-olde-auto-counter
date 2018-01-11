@@ -1,0 +1,33 @@
+.Counter {
+  width: 80%;
+  margin: 16px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 16px;
+  text-align: center;
+}
+
+.Counter button {
+  font-size: medium;
+  color: white;
+  margin: 8px;
+  border: 2px solid #8c141c;
+  border-radius: 10px;
+  background-color: crimson;
+  padding: 6px 12px;
+}
+
+.Counter .green {
+  border-color: darkgreen;
+  background-color: green;
+}
+
+.Counter .yellow {
+  border-color: darkgoldenrod;
+  background-color: goldenrod;
+}
+
+.Counter .blue {
+  border-color: darkblue;
+  background-color: blue;
+}
