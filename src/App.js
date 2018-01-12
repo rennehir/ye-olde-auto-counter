@@ -15,7 +15,9 @@ class App extends Component {
     this.setState({newCounterName});
   };
 
-  addCounterHandler = () => {
+  addCounterHandler = (event) => {
+    event.preventDefault();
+
     let counters = this.state.counters;
     counters.push({
       text: this.state.newCounterName,
@@ -83,11 +85,13 @@ class App extends Component {
         </header>
         <div className="content">
           <h2>Counters</h2>
-          <p>Add new counter: <input
-            type="text"
-            onChange={this.counterNameChangedHandler}
-            value={this.state.newCounterName} autoFocus /></p>
-          <button onClick={this.addCounterHandler}>Add counter</button>
+          <form onSubmit={this.addCounterHandler}>
+            <label>Add new counter: </label><input
+              type="text"
+              onChange={this.counterNameChangedHandler}
+              value={this.state.newCounterName} autoFocus />
+            <button type="submit">Add counter</button>
+          </form>
           {counters}
         </div>
       </div>
